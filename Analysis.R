@@ -7,13 +7,9 @@ library(ggplot2)
 library(cowplot)
 library(rstudioapi)
 
-### set working directory to source file location
+### import sample data - reference current source file location
 
-setwd(dirname(getActiveDocumentContext()$path))
-
-### import sample data
-
-dat_smp <- read.csv("./GSC_sample_data/dat_sample.csv", stringsAsFactors = FALSE)
+dat_smp <- read.csv(paste0(dirname(getActiveDocumentContext()$path),"/GSC_sample_data/dat_sample.csv"), stringsAsFactors = FALSE)
 
 ### create new exposure indicator
 ### 0 for all weeks prior to index fire week and 1 only if exposed and during index fire week
