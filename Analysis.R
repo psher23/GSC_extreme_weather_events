@@ -5,7 +5,11 @@ library(dplyr)
 library(gsynth)
 library(ggplot2)
 library(cowplot)
+library(rstudioapi)
 
+### set working directory to source file location
+
+setwd(dirname(getActiveDocumentContext()$path))
 
 ### import sample data
 
